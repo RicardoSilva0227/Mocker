@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MovieTrackerAPI.Models
+namespace MovieTrackerAPI.Models.Movies
 {
     public class Movies
     {
@@ -15,8 +15,10 @@ namespace MovieTrackerAPI.Models
         /// </summary>
         [Required]
         public int movieStatus { get; set; }
+        public string? genre { get; set; }
         public int? timesRewatched { get; set; }
-        public int? ratingScore { get; set; }
         public string? imageUrl { get; set; }
+        public DateTime creationDate { get; set; }
+        public DateTime? updatedDate { get; set; }
     }
 }
